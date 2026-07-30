@@ -1,37 +1,35 @@
-const mensagens = [
-"A amizade verdadeira é um tesouro que dura para sempre. 💙",
-"Um amigo de verdade está ao seu lado nos bons e maus momentos. 🤝",
-"Grandes amizades tornam a vida muito mais especial. 😊",
-"Feliz Dia da Amizade! Que nunca faltem pessoas especiais na sua vida! 🎉",
-"Amigos transformam momentos simples em lembranças inesquecíveis. ❤️"
-];
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia da Amizade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-const texto = document.getElementById("mensagem");
-const botao = document.getElementById("btn");
+<div class="card">
 
-botao.addEventListener("click", () => {
-    const aleatoria = Math.floor(Math.random() * mensagens.length);
-    texto.textContent = mensagens[aleatoria];
-});
+  <img
+    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900"
+    alt="Amigos juntos"
+    class="banner"
+  >
 
-function criarCoracao(){
+  <h1>🤝 20 de Julho</h1>
+  <h2>Feliz Dia da Amizade!</h2>
 
-    const coracao = document.createElement("div");
-    coracao.classList.add("heart");
+  <p id="texto">
+    A amizade é um presente que torna a vida mais feliz. Valorize quem está ao seu lado!
+  </p>
 
-    coracao.innerHTML="❤️";
+  <button onclick="trocarMensagem()">
+    💙 Nova Mensagem
+  </button>
 
-    coracao.style.left=Math.random()*100+"vw";
-    coracao.style.top="100vh";
-    coracao.style.fontSize=(20+Math.random()*30)+"px";
-    coracao.style.animationDuration=(4+Math.random()*3)+"s";
+</div>
 
-    document.body.appendChild(coracao);
+<script src="script.js"></script>
 
-    setTimeout(()=>{
-        coracao.remove();
-    },7000);
-
-}
-
-setInterval(criarCoracao,300);
+</body>
+</html>
