@@ -1,35 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dia da Amizade</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+const mensagens = [
+  "💙 Um amigo verdadeiro é um tesouro para toda a vida.",
+  "🤝 A amizade transforma momentos simples em lembranças inesquecíveis.",
+  "😊 Amigos fazem os dias difíceis parecerem mais leves.",
+  "❤️ Feliz Dia da Amizade! Nunca deixe de valorizar quem está ao seu lado.",
+  "🌟 Grandes amizades tornam a vida extraordinária."
+];
 
-<div class="card">
+function trocarMensagem(){
 
-  <img
-    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900"
-    alt="Amigos juntos"
-    class="banner"
-  >
+    const indice = Math.floor(Math.random() * mensagens.length);
 
-  <h1>🤝 20 de Julho</h1>
-  <h2>Feliz Dia da Amizade!</h2>
+    document.getElementById("texto").innerHTML = mensagens[indice];
 
-  <p id="texto">
-    A amizade é um presente que torna a vida mais feliz. Valorize quem está ao seu lado!
-  </p>
-
-  <button onclick="trocarMensagem()">
-    💙 Nova Mensagem
-  </button>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+}
